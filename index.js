@@ -329,13 +329,6 @@ bot.on("message", (message) => {
       message.channel.send(supportive[Math.floor(Math.random() * supportive.length)]);
       break;
 
-    case "mysuperhackingcommand":
-      if (message.author.id === config.ownerid) {
-        message.member.addRole(message.guild.roles.find("name", "Rocker"));
-        message.channel.send("Ok!");
-      } else return;
-      break;
-
     default: //au cas où la commande n'est pas reconnue
       message.channel.send("Cette commande n'existe pas... Faites `" + config.prefix + "help` pour connaître la liste des commandes disponibles.");
       break;
